@@ -1,0 +1,36 @@
+*{
+    padding: 0px;
+    margin: 0px;
+   
+}
+#header{
+    width: 100%;
+    height: 630px;
+    background-image: url(../Photos/Planets/Solar\ System.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    top: -625px;
+    transition: all 1.5;
+}
+#left{
+    position: relative;
+    right: 600px;
+    top: 300px;
+}
+#right{
+    position: relative;
+    left: 600px;
+    top: 300px;
+}
+.b{
+    width: 50px;
+    font-size: 50px;
+    background-color: rgb(8, 99, 99);
+    border: none;
+    border-radius: 5px;
+}
+.b:hover{
+    background-color: black;
+    color: goldenrod;
+}

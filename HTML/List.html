@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        .mainlist{
+            width: 70px;
+            height: 60px;
+            background-color: teal;
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        #carSublist{
+            list-style: none;
+            position: relative;
+            left: 70px;
+            top: -20px;
+            display: none;
+        }
+        #carList:hover #carSublist{
+            display: block;
+            background-color: rgb(4, 85, 85);
+        }
+    </style>
+</head>
+<body>
+    <ul id="mainlist">
+        <li id="carList" class="mainlist">Car
+            <ul id="carSublist">
+                <li class="sublist">Audi</li>
+                <li class="sublist">Ferari</li>
+                <li class="sublist">Benz</li>
+                <li class="sublist">marasati</li>
+            </ul>
+        </li>
+        <li class="mainlist">Bike
+            <ul id="sublist">
+                <li class="sublist">BMW</li>
+                <li class="sublist">Pulsar</li>
+                <li class="sublist">Ninja</li>
+                <li class="sublist">Duke</li>
+            </ul>
+        </li>
+        <li class="mainlist">Aeroplane</li>
+    </ul>
+</body>
+</html>

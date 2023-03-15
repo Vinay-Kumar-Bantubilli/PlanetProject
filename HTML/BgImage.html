@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/BgImage.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/ArrayImages.css">
+    <script src="../JS/ArrayImages.js" defer></script>
+    <link rel="stylesheet" href="../CSS/subwindow.css">
+    <link rel="stylesheet" href="../CSS/gallery.css">
+    <script src="../js/gallery.js" defer></script>
+<body onload="inc()">
+
+    
+    <!-- ****************************   HOME   **************************** -->
+    <div id="home">
+        <h1 id="name">Student Of The Galaxy</h1>
+        <img id="astro" src="../photos/astronaut_png.png" alt="">
+        <img id="bg" src="../Photos/Planets/Solar System.jpg" alt="">
+    </div>
+
+      <!-- ******  navbar  ****** -->
+      <div id="navbar">
+        <ul id="mainlist">
+            <a href="BgImage.html"><li class="mli">home</li></a>
+            <li class="mli" onclick="showSlides()" >slides</li>
+            
+            <li class="mli" id="sublistobj">object
+                <ul id="sublist">
+                    <li class="sli" id="planetList" onclick="openGallery()">planet
+                        <ul id="planets">
+                            <li class="planets" id="sun">sun</li>
+                            <li class="planets" id="earth">earth</li>
+                            <li class="planets" id="moon">moon</li>
+                            <li class="planets" id="jupiter">jupiter</li>
+                            <li class="planets" id="saturn">saturn</li>
+                        </ul>
+                    </li>
+                    <a href="./Stars/StarsGallery.html" target="_blank"><li class="sli">Stars</li></a>
+                    <a href="./Black Hole/Black Hole.html" target="_blank"><li class="sli">Blackhole</li></a>
+                    <li class="sli">Astroid</li>
+                    <li class="sli">Satellite</li>
+                </ul>
+            </li>
+            <a href="./Info.html"><li class="mli">Info</li></a>
+            <a href="../index.html"><li class="mli">Log-out</li></a>
+        </ul>
+     </div>
+    
+    
+
+    <!-- Array Images -->
+    <div id="header" style="display:none;">
+        <center>
+            <input class="b" id="left" type="button" value="<" onclick="dec()">
+            <input class="b" id="right" type="button" value=">" onclick="inc()">
+        </center>
+    </div>
+
+    <div id="gallery" style="display: none">
+        <center><h1 style="color:bisque">Gallery</h1></center>
+        <img class="a" onclick="openImage('sun','very hot')">
+        <img class="a" onclick="openImage('moon','cool')">
+        <img class="a" onclick="openImage('jupiter','jupiter one of the massive planet')">
+        <img class="a" onclick="openImage('earth','Earth is third planet from the sun. Best planet for the living organisms')">
+        <img class="a" onclick="openImage('mars','one of the gaseos planet')">
+        <img class="a" onclick="openImage('sun')">
+    </div>
+
+    <div id="subwindow" style="display: none">
+        <h1 id="close" onclick="closeImage()" >@</h1>
+        <img id="windowImage"  alt="">
+        <h1 id="head"></h1>
+        <p id="desc"></p>
+    </div>
+
+
+    <script>
+       
+    </script>
+</body>
+</html>

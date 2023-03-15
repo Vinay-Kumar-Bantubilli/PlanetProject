@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            transition: all 3s;
+        }
+        body{
+            background-image: linear-gradient(90deg,rgb(1, 0, 75), rgb(161, 0, 0) );
+            background-size: 100% 650px;
+            background-repeat: no-repeat;
+        }
+        #container{
+            position: relative;
+            top: 22vh;
+            width: 30vw;
+            height: 50vh;
+            background-image: linear-gradient(90deg, rgb(124, 24, 40), rgb(53, 0, 139));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            box-shadow: 5px 5px 5px yellow, -5px -5px 5px yellow, -5px 5px 5px yellow, 5px -5px 5px yellow;
+        }
+        .input{
+            width: 200px;
+            height: 25px;
+            border-radius: 30px;
+            border-color:blue;
+            text-align: center;
+        }
+        input{
+           box-shadow: 2px 2px 3px black;
+           border-radius: 3px;
+           background-color: black;
+           color: gold;
+        }
+        #submit{
+            width: 60px;
+            height: 24px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #submit:hover{
+            background-color: rgb(37, 37, 37);
+        }
+        #monkey{
+            position: relative;
+            bottom: 25px;
+            left: 85px;
+            cursor: pointer;
+            background-color: yellow;
+            border-radius: 8px;
+            transition: all 2s;
+            
+        }
+        #monkey:hover{
+            transform: rotateY(360deg);
+        }
+        #guide{
+            color: red;
+            position: relative;
+    
+        }
+    </style>
+</head>
+<body id="body">
+    <center>
+        <form id="container">
+            <input class="input" type="text" placeholder="email id" id="email" ><br>
+            <input class="input" type="password" placeholder="password" id="password" >
+            <div id="monkey" onclick="monkeyOpen()">🙈</div><br>
+            <input id="submit" type="button" value="login" onclick="fun()">
+        </form>
+        <p id="guide"></p>
+    </center>
+    
+    <script>
+        function fun(){
+            var email = "vinay@gmail.com"
+            var password = "12345"
+            var userEmail = document.getElementById("email").value
+            var userPassword = document.getElementById("password").value
+
+
+            if (password==userPassword && email == userEmail){
+                document.getElementById("body").style.backgroundImage="linear-gradient( green, green)"
+                // document.getElementById("body").style.backgroundImage="linear-gradient( red, red)"
+                document.getElementById("container").setAttribute("action","./HTML/BgImage.html")
+                document.getElementById("submit").setAttribute("type","submit")
+            }
+            else{
+                document.getElementById("body").style.backgroundImage="linear-gradient(90deg, red, red)"
+                document.getElementById("guide").innerHTML="invalid credentials"
+            }
+            if (email == userEmail && password!=userPassword){
+                document.getElementById("body").style.backgroundImage="linear-gradient( 90deg,red, green)"
+                document.getElementById("guide").innerHTML="invalid credentials"
+            }
+            else if (email!=userEmail && password == userPassword){
+                document.getElementById("body").style.backgroundImage="linear-gradient(90deg, green, red)"
+                document.getElementById("guide").innerHTML="invalid credentials"
+            }
+        }
+
+        var c = 0;
+        function monkeyOpen(){
+            c++;
+           
+            if (c%2 == 1){
+                document.getElementById("monkey").innerHTML="🐵"
+                document.getElementById("password").removeAttribute("type")
+                document.getElementById("monkey").style.rotate="360deg"
+            }
+            else{
+                document.getElementById("monkey").innerHTML="🙈"
+                document.getElementById("password").setAttribute("type","password")
+                document.getElementById("monkey").style.rotate="0deg"
+            }
+        }
+    </script>
+</body>
+</html>

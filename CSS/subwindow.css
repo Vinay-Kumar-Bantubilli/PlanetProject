@@ -1,0 +1,48 @@
+#subwindow{
+    width: 1000px;
+    height: 550px;
+    background-color: rgb(7, 7, 7,0.7);
+    position: absolute;
+    top: 10vh;
+    left: 27vh;
+    position: fixed;
+}
+#close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: black;
+    color: gold;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid gold;
+    font-size: 25px;
+}
+#windowImage{
+    width: 35vw;
+    height: 50vh;
+    background-color: blueviolet;
+    position: absolute;
+    left: 5vw;
+    top: 15vh;
+    border: 3px solid white;
+    border-radius: 3px 3px 3px black;
+}
+#head{
+    position: absolute;
+    right: 14vw;
+    top:10vh;
+    color: white;
+}
+#desc{
+    width: 35vw;
+    height: 70vh;
+    width: 400px;
+    position: absolute;
+    right: 10px;
+    top: 20vh;
+    color: white;
+    word-spacing: 10px;
+}
